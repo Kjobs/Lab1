@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.devModel" value="true" />
+	<package name="basicstruts2" extends="struts-default">
+		<action name="index">
+			<result name="success">/index.jsp</result>
+		</action>
+		
+		<action name="main" class="cn.news.action.NewsCrawl" method="execute">
+			<result name="success">/jsp/MainNews.jsp</result>
+		</action>
+		
+		<action name="technology" class="cn.news.action.TechNewsCrawl" method="execute">
+			<result name="success">/jsp/TechNews.jsp</result>
+		</action>
+		
+		<action name="education" class="cn.news.action.EduNewsCrawl" method="execute">
+			<result name="success">/jsp/EduNews.jsp</result>		
+		</action>
+		
+		<action name="sports" class="cn.news.action.SportsNewsCrawl" method="execute">
+			<result name="success">/jsp/SportsNews.jsp</result>		
+		</action>
+		
+		<action name="finance" class="cn.news.action.FinanceNewsCrawl" method="execute">
+			<result name="success">/jsp/FinanceNews.jsp</result>		
+		</action>
+		
+		<action name="entertainment" class="cn.news.action.EttmNewsCrawl" method="execute">
+			<result name="success">/jsp/EntertainmentNews.jsp</result>		
+		</action>
+		
+		<action name="video" class="cn.news.action.VideoNewsCrawl" method="execute">
+			<result name="success">/jsp/VideoNews.jsp</result>		
+		</action>
+		
+		<action name="car" class="cn.news.action.CarNewsCrawl" method="execute">
+			<result name="success">/jsp/CarNews.jsp</result>		
+		</action>
+		
+		<action name="game" class="cn.news.action.GameNewsCrawl" method="execute">
+			<result name="success">/jsp/GameNews.jsp</result>		
+		</action>
+		
+		<action name="health" class="cn.news.action.HealthNewsCrawl" method="execute">
+			<result name="success">/jsp/HealthNews.jsp</result>		
+		</action>
+		
+		<action name="war" class="cn.news.action.WarNewsCrawl" method="execute">
+			<result name="success">/jsp/WarNews.jsp</result>		
+		</action>
+		
+		<action name="movie" class="cn.news.action.MovieNewsCrawl" method="execute">
+			<result name="success">/jsp/MovieNews.jsp</result>		
+		</action>
+		
+		<action name="AddLikeNum" class="cn.user.action.AddLikeNum" method="execute">
+			<result name="success">/jsp/CarNews.jsp</result>
+		</action>
+		
+		<action name="login" class="cn.user.action.LoginAction" method="execute">
+			<result name="success">/index.jsp</result>
+			<result name="error">/jsp/error.jsp</result>
+		</action>
+		
+		<action name="signup" class="cn.user.action.SignupAction" method="execute">
+			<result name="success">/index.jsp</result>
+			<result name="error">/jsp/error.jsp</result>
+		</action>
+		
+	</package>
+</struts>
