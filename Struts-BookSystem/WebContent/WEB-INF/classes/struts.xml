@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+  <constant name="struts.devMode" value="true" />
+  <package name="basicstruts2" extends="struts-default">
+    <action name="index">
+    	<result>/index.jsp</result>
+    </action>
+    
+    <action name="ReturnMain">
+    	<result>/index.jsp</result>
+    </action>
+    
+    <action name="Query">
+    	<result>/jsp/Query.jsp</result>
+    </action>
+    
+    <action name="PageAdd">
+    	<result>/jsp/AddBook.jsp</result>
+    </action>
+         
+    <action name="hello" class="org.apache.struts.helloworld.action.HelloWorldAction" method="execute">
+    	<result name="success">/jsp/HelloWorld.jsp</result>
+    </action>
+    
+    <action name="QueryAuthorBook" class="query.AuthorBook.action.QABaction" method="execute">
+    	<result name="success">/jsp/AuthorsBook.jsp</result>
+    	<result name="author">/jsp/AuthorList.jsp</result>
+    	<result name="error">/jsp/ErrorPage.jsp</result>
+    </action>
+    
+    <action name="QueryAB" class="query.AuthorBook.action.QABInfoAction" method="execute">
+    	<result name="success">/jsp/ABInfo.jsp</result>
+    	<result name="error">/jsp/ErrorPage.jsp</result>
+    </action>
+    
+    <action name="DeleteBook" class="changebook.action.DeleteBook" method="execute">
+    	<result name="success">/jsp/DeleteBook.jsp</result>
+    </action>
+    
+    <action name="AddBook" class="changebook.action.AddBook" method="execute">
+    	<result name="success">/jsp/PageSuccess.jsp</result>
+    	<result name="titleExist">/jsp/TitleExist.jsp</result>
+    	<result name="addAuthor">/jsp/AddAuthor.jsp</result>
+    	<result name="error">/jsp/ErrorPage.jsp</result>
+    </action>
+    
+    <action name="AddAuthor" class="changeauthor.action.AddAuthor" method="execute">
+    	<result name="success">/jsp/PageSuccess.jsp</result>
+    	<result name="error">/jsp/ErrorPage.jsp</result>
+    </action>	   
+  </package>
+</struts>
